@@ -29,7 +29,7 @@ from p2pnetwork.node import Node
 class FileSharingNode (Node):
 
     def __init__(self, host, port, id=None, callback=None, max_connections=0):
-        super(MyOwnPeer2PeerNode, self).__init__(host, port, id, callback, max_connections)
+        super(FileSharingNode, self).__init__(host, port, id, callback, max_connections)
 
     def outbound_node_connected(self, connected_node):
         print("outbound_node_connected: " + connected_node.id)
@@ -106,7 +106,7 @@ From this moment, you have already a bare minimum application that implements th
 2. ````python file_sharing_node.py 9877````
 
 ## Step 5: Connect to another node
-We are going to add the functionality to connect with another node. In this case, you should spin off in another terminal the application on port 9877: ````file_sharing_node.py 9877````. When the user wants to connect to another node, you need to provide a host/ip and port number.
+We are going to add the functionality to connect with another node. In this case, you should spin off in another terminal the application on port 9877: ````file_sharing_node.py 9877````. When the user wants to connect to another node, you need to provide a host/ip and port number. Add the following code to ````file_sharing_node.py````.
 
 ````python
 ....
